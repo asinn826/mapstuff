@@ -1,0 +1,16 @@
+{
+  "name": "mapScraper",
+  "version": "0.0.0",
+  "description": "ERROR: No README data found!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alfred",
+  "dependencies" : {
+	"express"    : "latest",
+	"request"    : "latest",
+	"cheerio"    : "latest"
+  },
+  "license": "BSD-2-Clause"
+}
