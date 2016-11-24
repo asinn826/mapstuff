@@ -1,6 +1,7 @@
 var _infowindow;
 var _geocoder;
 var _map;
+var _circle;
 
 function initMap() {
     var seattle = {lat: 47.611857, lng: -122.332987};
@@ -12,9 +13,11 @@ function initMap() {
     _infowindow = new google.maps.InfoWindow();
     google.maps.event.addListener(_map, 'click', function() {
         _infowindow.close();
+        circleCloseHandler();
     });
 
     _geocoder = new google.maps.Geocoder();
+    _circle = new google.maps.Circle();
     plotApartments();
 };
 
@@ -32,6 +35,7 @@ function plotConnectorStops(map) {
             _infowindow.setContent(this.info);
             _infowindow.open(_map,this);
         });
+        google.maps.event.addListener(marker, 'click', circleDrawHandler());
     }
 };
 
@@ -53,3 +57,26 @@ function plotApartments() {
         });
     }
 };
+
+function circleDrawHandler() {
+    radius = 1; // 1km hard coded
+    radius = (radius / 6378.1) * 6378100;
+
+    // _circle.setOptions({
+    //     center: e.latLng,
+    //     clickable: true,
+    //     draggable: false,
+    //     editable: false,
+    //     fillColor: '#004de8',
+    //     fillOpacity: 0.27,
+    //     map: _map,
+    //     radius: radius,
+    //     strokeColor: '#004de8',
+    //     strokeOpacity: 0.62,
+    //     strokeWeight: 1
+    // });
+}
+
+function circleCloseHandler() {
+    _circle.setMap(null);
+}
