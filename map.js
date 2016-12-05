@@ -1,7 +1,7 @@
 var _infowindow;
 var _geocoder;
 var _map;
-var _circle;
+var _circles = [];
 
 function initMap() {
     var seattle = {lat: 47.611857, lng: -122.332987};
@@ -9,21 +9,20 @@ function initMap() {
         zoom: 14,
         center: seattle
     });
-    plotConnectorStops(_map);
+    plotConnectorStops();
+    plotRoute545Stops();
     _infowindow = new google.maps.InfoWindow();
     google.maps.event.addListener(_map, 'click', function() {
         _infowindow.close();
-        circleCloseHandler();
     });
 
     _geocoder = new google.maps.Geocoder();
-    _circle = new google.maps.Circle();
     plotApartments();
 };
 
-function plotConnectorStops(map) {
+function plotConnectorStops() {
     var busImage = 'assets/bus.png'
-    for (var i = 0; i < _connectorStops.length - 1; i++) {
+    for (var i = 0; i < _connectorStops.length; i++) {
         var latLong = { lat: _connectorStops[i].Latitude, lng: _connectorStops[i].Longitude };
         var marker = new google.maps.Marker({
             position: latLong,
@@ -35,12 +34,27 @@ function plotConnectorStops(map) {
             _infowindow.setContent(this.info);
             _infowindow.open(_map,this);
         });
-        google.maps.event.addListener(marker, 'click', circleDrawHandler());
     }
 };
 
+function plotRoute545Stops() {
+    var busImage = 'assets/transit.png'
+    for (var i = 0; i < _busStops545.length; i++) {
+        var latLong = { lat: _busStops545[i].Latitude, lng: _busStops545[i].Longitude };
+        var marker = new google.maps.Marker({
+            position: latLong,
+            map: _map,
+            info: '<b>' + _busStops545[i].name + '</b>',
+            icon: busImage
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            _infowindow.setContent(this.info);
+            _infowindow.open(_map,this);
+        });
+    }
+}
+
 function plotApartments() {
-    console.log('rofl');
     for (var i = 0; i < _apartments.length; i++) {
         var name = _apartments[i].name;
         var address = _apartments[i].address;
@@ -58,25 +72,24 @@ function plotApartments() {
     }
 };
 
-function circleDrawHandler() {
-    radius = 1; // 1km hard coded
-    radius = (radius / 6378.1) * 6378100;
-
-    // _circle.setOptions({
-    //     center: e.latLng,
-    //     clickable: true,
-    //     draggable: false,
-    //     editable: false,
-    //     fillColor: '#004de8',
-    //     fillOpacity: 0.27,
-    //     map: _map,
-    //     radius: radius,
-    //     strokeColor: '#004de8',
-    //     strokeOpacity: 0.62,
-    //     strokeWeight: 1
-    // });
-}
-
-function circleCloseHandler() {
-    _circle.setMap(null);
+function buttonClickHandler() {
+    for (var i = 0; i < _circles.length; i++) {
+        _circles[i].setMap(null);
+    }
+    var input = parseInt(document.getElementById('radiusInput').value);
+    var array = _connectorStops.concat(_busStops545);
+    for (var i = 0; i < array.length; i++) {
+        var latLong = { lat: array[i].Latitude, lng: array[i].Longitude };
+        var cityCircle = new google.maps.Circle({
+            strokeColor: '#0080ff',
+            strokeOpacity: 0.3,
+            strokeWeight: 1,
+            fillColor: '#00bfff',
+            fillOpacity: 0.15,
+            map: _map,
+            center: latLong,
+            radius: input
+        });
+        _circles.push(cityCircle);
+    }
 }

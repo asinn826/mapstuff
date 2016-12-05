@@ -4,6 +4,7 @@
         <link href="./custom.css" rel="stylesheet" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
         <script src="./connectorStops.js"></script>
+        <script src="./busStops545.js"></script>
         <script src="./apartments.js"></script>
         <title>Map shit</title>
     </head>
@@ -12,6 +13,11 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFAt8r-ucb-UCdAnGhnHm-wONSJSA9psg&callback=initMap">
     </script>
+    <form class="inputForm">
+        <label for="radiusInput">Radius (m)</label>
+        <input type="number" value="500" min="0" id="radiusInput" step="10" name="radiusInput" autofocus="">
+        <button type="button" onclick="buttonClickHandler()">Ok</button>
+    </form>
 </body>
 <script src="./map.js"></script>
 </html>
