@@ -5,9 +5,10 @@ var _circles = [];
 
 function initMap() {
     var seattle = {lat: 47.611857, lng: -122.332987};
+    var center = {lat: 47.612961, lng: -122.264473};
     _map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: seattle
+        zoom: 13,
+        center: center
     });
     plotConnectorStops();
     plotRoute545Stops();
@@ -18,6 +19,7 @@ function initMap() {
 
     _geocoder = new google.maps.Geocoder();
     plotApartments();
+    plotBellevueApartments();
 };
 
 function plotConnectorStops() {
@@ -40,7 +42,7 @@ function plotConnectorStops() {
 function plotRoute545Stops() {
     var busImage = 'assets/transit.png'
     for (var i = 0; i < _busStops545.length; i++) {
-        var latLong = { lat: _busStops545[i].Latitude, lng: _busStops545[i].Longitude };
+        var latLong = { lat: parseFloat(_busStops545[i].Latitude), lng: parseFloat(_busStops545[i].Longitude) };
         var marker = new google.maps.Marker({
             position: latLong,
             map: _map,
@@ -59,7 +61,25 @@ function plotApartments() {
         var name = _apartments[i].name;
         var address = _apartments[i].address;
         var website = _apartments[i].website;
-        var latLng = { lat: _apartmentsWithLatLong[i].Latitude, lng: _apartmentsWithLatLong[i].Longitude };
+        var latLng = { lat: parseFloat(_apartmentsWithLatLong[i].Latitude), lng: parseFloat(_apartmentsWithLatLong[i].Longitude) };
+        var marker = new google.maps.Marker({
+            position: latLng,
+            map: _map,
+            info: '<h2>' + name + '</h2><h3>' + address + '</h3><a href=\'' + website + '\' target=\'_blank\'>Website</a>'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            _infowindow.setContent(this.info);
+            _infowindow.open(_map,this);
+        });
+    }
+};
+
+function plotBellevueApartments() {
+    for (var i = 0; i < _bellevueApartments.length; i++) {
+        var name = _bellevueApartments[i].name;
+        var address = _bellevueApartments[i].address;
+        var website = _bellevueApartments[i].website;
+        var latLng = { lat: parseFloat(_bellevueApartments[i].lat), lng: parseFloat(_bellevueApartments[i].lon) };
         var marker = new google.maps.Marker({
             position: latLng,
             map: _map,
@@ -91,5 +111,11 @@ function buttonClickHandler() {
             radius: input
         });
         _circles.push(cityCircle);
+    }
+}
+
+function clearCirclesHandler() {
+    for (var i = 0; i < _circles.length; i++) {
+        _circles[i].setMap(null);
     }
 }

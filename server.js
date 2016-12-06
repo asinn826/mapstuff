@@ -7,8 +7,8 @@ var app     = express();
 app.get('/scrape', function(req, res){
 
 var apartments = [];
-    for (var j = 10; j <= 28; j++) {
-        var pageUrl = 'http://www.apartments.com/' + j + '/?bb=2zslnzr5tQvm5lhI';
+    // for (var j = 10; j <= 28; j++) {
+        var pageUrl = 'http://www.apartments.com/bellevue-wa/1100-to-1850/?bb=rgymzk63sQ0yuzgD'; //'http://www.apartments.com/' + j + '/?bb=2zslnzr5tQvm5lhI';
     	request(pageUrl, function(error, response, html) {
 
         	if (!error) {
@@ -43,7 +43,7 @@ var apartments = [];
                 });
     	    }
     	});
-    }
+    // }
 
 
 
