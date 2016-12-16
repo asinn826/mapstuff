@@ -103,5 +103,12 @@ var _bellevueApartments = [
         "website": "http://www.apartments.com/excalibur-bellevue-wa/j3xtn04/",
         lat: 47.611572,
         lon: -122.191352
+    },
+    {
+        "name": "Metro 112",
+        "address": "317 112th Ave NE, Bellevue, WA 98004",
+        "website": "http://www.apartments.com/metro-112-bellevue-wa/gdyhlby/",
+        lat: 47.613498,
+        lon: -122.191581
     }
 ]

@@ -328,6 +328,11 @@ var _apartments = [
     	"name": "Three20",
     	"address": "320 E Pine St, Seattle, WA 98122",
     	"website": "http://www.apartments.com/three20-seattle-wa/2czbqxc/"
+    },
+    {
+    	"name": "ArtHouse",
+    	"address": "2334 Elliott Ave, Seattle, WA 98121",
+    	"website": "https://www.apartments.com/arthouse-seattle-wa/dgwn88h/"
     }
 ]
 
@@ -859,5 +864,13 @@ var _apartmentsWithLatLong = [
   	"Zip": 98122,
   	"Latitude": 47.615597,
   	"Longitude": -122.327142
+  },
+  {
+  	"Address": "2334 Elliott Ave",
+  	"City": "Seattle",
+  	"State": "WA",
+  	"Zip": 98121,
+  	"Latitude": 47.612634,
+  	"Longitude": -122.348931
   }
 ]
