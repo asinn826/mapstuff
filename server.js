@@ -4,11 +4,13 @@ var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
 
+// run with http://localhost:8081/scrape
+
 app.get('/scrape', function(req, res){
 
 var apartments = [];
     // for (var j = 10; j <= 28; j++) {
-        var pageUrl = 'http://www.apartments.com/bellevue-wa/1100-to-1850/?bb=rgymzk63sQ0yuzgD'; //'http://www.apartments.com/' + j + '/?bb=2zslnzr5tQvm5lhI';
+        var pageUrl = 'https://www.apartments.com/under-1700/?bb=q92xj44ptQu_qiQ'; //'http://www.apartments.com/' + j + '/?bb=2zslnzr5tQvm5lhI';
     	request(pageUrl, function(error, response, html) {
 
         	if (!error) {

@@ -1,81 +1,36 @@
 [
     {
-        "name": "Venn at Main",
-        "address": "10333 NE 1st St, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/venn-at-main-bellevue-wa/qjmmmny/"
+        "name": "The Pearl",
+        "address": "1530 15th Ave, Seattle, WA 98122",
+        "website": "https://www.apartments.com/the-pearl-seattle-wa/x335j5n/"
     },
     {
-        "name": "The Bravern Signature Residences",
-        "address": "688 110th Ave NE, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/the-bravern-signature-residences-bellevue-wa/r62km42/"
+        "name": "Ruth Court",
+        "address": "123 18th Ave E, Seattle, WA 98112",
+        "website": "https://www.apartments.com/ruth-court-seattle-wa/jg1s415/"
     },
     {
-        "name": "AMLI at Bellevue Park",
-        "address": "10001 NE 1st St, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/amli-at-bellevue-park-bellevue-wa/ffc5g7s/"
+        "name": "\r\n\r\n\r\n\r\n",
+        "address": "",
+        "website": ""
     },
     {
-        "name": "Avalon Towers Bellevue",
-        "address": "10349 NE 10th St, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/avalon-towers-bellevue-bellevue-wa/ex4z61p/"
+        "name": "\r\n\r\n\r\n\r\n",
+        "address": "",
+        "website": ""
     },
     {
-        "name": "Avalon Bellevue",
-        "address": "11000 NE 10th St, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/avalon-bellevue-bellevue-wa/8b5sxd3/"
+        "name": "\r\n\r\n\r\n\r\n",
+        "address": "",
+        "website": ""
     },
     {
-        "name": "Park 88 Residences",
-        "address": "88 102nd Ave NE, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/park-88-residences-bellevue-wa/6tf02js/"
+        "name": "\r\n\r\n\r\n\r\n",
+        "address": "",
+        "website": ""
     },
     {
-        "name": "Soma Towers",
-        "address": "288 106th Ave NE, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/soma-towers-bellevue-wa/lclz02d/"
-    },
-    {
-        "name": "Bell Centre",
-        "address": "108 Avenue Ave NE, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/bell-centre-bellevue-wa/nzlndgq/"
-    },
-    {
-        "name": "City Square Bellevue",
-        "address": "938 110th Ave NE, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/city-square-bellevue-bellevue-wa/lfvq7nf/"
-    },
-    {
-        "name": "Avalon Meydenbauer",
-        "address": "10410 NE 2nd St, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/avalon-meydenbauer-bellevue-wa/r615183/"
-    },
-    {
-        "name": "2nd Street Apartments",
-        "address": "11115 NE 2nd St, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/2nd-street-apartments-bellevue-wa/r4fbdq1/"
-    },
-    {
-        "name": "Soma",
-        "address": "10701 Main St, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/soma-bellevue-wa/9bm81c7/"
-    },
-    {
-        "name": "Heights at Meydenbauer",
-        "address": "324 102nd Ave SE, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/heights-at-meydenbauer-bellevue-wa/jkw3kp5/"
-    },
-    {
-        "name": "The Commodore Apartments",
-        "address": "527-537 Bellevue Way SE, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/the-commodore-apartments-bellevue-wa/gbjb27w/"
-    },
-    {
-        "name": "Excalibur",
-        "address": "123 NE 112th Ave, Bellevue, WA 98004",
-        "website": "http://www.apartments.com/excalibur-bellevue-wa/j3xtn04/"
-    },
-    {
-        "name": "",
+        "name": "\r\n\r\n\r\n\r\n",
         "address": "",
         "website": ""
     },
@@ -105,11 +60,6 @@
         "website": ""
     },
     {
-        "name": "",
-        "address": "",
-        "website": ""
-    },
-    {
         "name": "\r\n\r\n\r\n\r\n",
         "address": "",
         "website": ""
@@ -135,12 +85,17 @@
         "website": ""
     },
     {
-        "name": "",
+        "name": "\r\n\r\n\r\n\r\n",
         "address": "",
         "website": ""
     },
     {
-        "name": "",
+        "name": "\r\n\r\n\r\n\r\n",
+        "address": "",
+        "website": ""
+    },
+    {
+        "name": "\r\n\t\t\t",
         "address": "",
         "website": ""
     }

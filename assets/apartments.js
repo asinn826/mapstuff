@@ -333,6 +333,11 @@ var _apartments = [
     	"name": "ArtHouse",
     	"address": "2334 Elliott Ave, Seattle, WA 98121",
     	"website": "https://www.apartments.com/arthouse-seattle-wa/dgwn88h/"
+    },
+    {
+    	"name": "206 Bell",
+    	"address": "206 Bell St, Seattle, WA 98121",
+    	"website": "https://www.apartments.com/206-bell-seattle-wa/3v1hy4e/"
     }
 ]
 
@@ -872,5 +877,13 @@ var _apartmentsWithLatLong = [
   	"Zip": 98121,
   	"Latitude": 47.612634,
   	"Longitude": -122.348931
+  },
+  {
+  	"Address": "206 Bell St",
+  	"City": "Seattle",
+  	"State": "WA",
+  	"Zip": 98121,
+  	"Latitude": 47.614337,
+  	"Longitude": -122.345675
   }
 ]

@@ -118,4 +118,5 @@ function clearCirclesHandler() {
     for (var i = 0; i < _circles.length; i++) {
         _circles[i].setMap(null);
     }
+    _circles = [];
 }
